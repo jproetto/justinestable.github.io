@@ -1,0 +1,53 @@
+<html>
+    <h1 style="color:darkcyan;text-align: center;">Justine's Table </h1>
+
+<script> 
+
+    const imageHoldingArray = [
+        'https://image.newyorkcity.ca/wp-content/uploads/2016/09/Best-Views-in-New-York.jpg',
+        'https://media.npr.org/assets/img/2023/05/05/gettyimages-1359616274_wide-af5b01ff21bd41d7420f1066212bbfa11537cb36.jpg',
+        'https://post.healthline.com/wp-content/uploads/2020/09/tomatoes-1200x628-facebook-1200x628.jpg',
+        'https://www.realsimple.com/thmb/zjJYhj0AXTu8Ndio6-Hl2NzSicY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/health-benefits-of-garlic-2000-482c21fd2d154102a9b7a46ccb34e70a.jpg',
+        'https://www.allrecipes.com/thmb/5SdUVhHTMs-rta5sOblJESXThEE=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/11691-tomato-and-garlic-pasta-ddmfs-3x4-1-bf607984a23541f4ad936b33b22c9074.jpg',
+        'https://www.travelandleisure.com/thmb/c-nuaEqUffHAByhV7Ls6iDEeXwc=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/TAL-header-atrani-italy-amalfi-coast-AMALFITOWNS0223-c516bc91bb434e19b5ec6e2fb50cb9eb.jpg'
+        ];
+    const arrayLength = imageHoldingArray.length;
+    const pictureTimer = 2000;
+    var counter = 0;
+  
+
+    function rotatePhotos(){   
+    let photo = document.getElementById('photo');
+    if(counter < arrayLength-1){
+        counter++;
+        photo.src = imageHoldingArray[counter];
+        }
+    else{
+        counter = 0; 
+        photo.src = imageHoldingArray[counter];
+        }
+    }
+
+setInterval(rotatePhotos, pictureTimer);
+        
+
+
+</script>
+
+<body> 
+
+    <img 
+    id = 'photo' 
+    height='600' 
+    src='https://image.newyorkcity.ca/wp-content/uploads/2016/09/Best-Views-in-New-York.jpg'>
+    </img>
+
+</body>
+    
+
+
+
+
+     
+</html>
+
